@@ -6,4 +6,6 @@ public interface Banksystem {
     void deposit(long amount);
     void withdraw(long amount);
     void showAccount();
+    boolean search(String acc_no);
 }
+
