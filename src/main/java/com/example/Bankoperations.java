@@ -18,7 +18,7 @@ public class Bankoperations {
         System.out.println("A deposit of " + amount + "is done");
         getBalance();
     }
-    void withdraw(){
+  public  void withdraw(){
         sc = new Scanner(System.in);
         System.out.println("Enter the amount to withdraw");
         amount = sc.nextDouble();
