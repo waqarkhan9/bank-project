@@ -31,4 +31,8 @@ public class Bankoperations {
         }
         getBalance();
     }
+    public void exit(){
+        System.out.println("Thank you and good bye");
+        System.exit(0);
+    }
 }
