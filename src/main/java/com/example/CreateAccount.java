@@ -1,45 +1,32 @@
 package com.example;
 
+import java.util.Scanner;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class CreateAccount {
-    public  Bankaccount createAccount(int acc_no, String name) {
-        Bankaccount newAccount = new Bankaccount(acc_no, name);
+    ArrayList<Bankaccount> customers = new ArrayList<Bankaccount>();
+
+    public static Bankaccount createAccount(int acc_no, String name, double balance) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Create an account");
+        System.out.println("please enter the account number");
+        acc_no = sc.nextInt();
+        System.out.println("please enter account holder name");
+        name = sc.next();
+        System.out.println("please enter initial balance for the account");
+        balance = sc.nextDouble();
+        Bankaccount newAccount = new Bankaccount(acc_no, name, balance);
+        System.out.println("New account created successfully");
+        newAccount.getAccountDetails();
         return newAccount;
     }
-    
-  
+
     public static void main(String[] args) {
-        ArrayList<Bankaccount> customers = new ArrayList<Bankaccount>();
 
-        CreateAccount ca = new CreateAccount();
-        Bankaccount ba = ca.createAccount(1, "Waqar");
-        Bankaccount bb = ca.createAccount(1, "Waqar");
-        Bankaccount bc = ca.createAccount(1, "Waqar");
+        createAccount(0, null, 0);
 
-       // ba.getDetails();
-       // bb.getDetails();
-       // bc.getDetails();
-
-        customers.add(ba);
-        customers.add(bb);
-        customers.add(bc);
-        for (int i =0; i < customers.size(); i++){
-            customers.get(i).getAccountDetails();
-        }
-
-
-
-
-
-
-
-
-
-       
-
-        
     }
 
 }

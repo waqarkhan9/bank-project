@@ -8,9 +8,10 @@ public class Bankaccount {
     double balance = 0;
     double amount;
     
-    public Bankaccount(int acc_no, String name){
+    public Bankaccount(int acc_no, String name, double balance){
         this.acc_no = acc_no;
         this.name = name;
+        this.balance = balance;
     }
     public void getAccountDetails(){
         System.out.println(acc_no + name + balance);
