@@ -8,7 +8,7 @@ public class Bankoperations {
     Scanner sc;
 
     public void getBalance(){
-        System.out.println("your balance is :" + balance);
+        System.out.println("your balance is :  " + balance);
     }
     public void deposit(){
         sc = new Scanner(System.in);

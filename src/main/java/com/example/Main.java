@@ -7,9 +7,9 @@ public class Main {
         Bankoperations bo = new Bankoperations();
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Please select options");
         int option = 0;
         while (option != 4) {
+            System.out.println("***********************");
             System.out.println("Welcome to the Bank");
             System.out.println("1. Check Balance");
             System.out.println("2. Deposit");
