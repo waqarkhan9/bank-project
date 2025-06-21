@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class CreateAccount {
     ArrayList<Bankaccount> customers = new ArrayList<Bankaccount>();
 
-    public static Bankaccount createAccount(int acc_no, String name, double balance) {
+    public  Bankaccount createAccount(int acc_no, String name, double balance) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Create an account");
         System.out.println("please enter the account number");
