@@ -14,7 +14,7 @@ public class Bankaccount {
         this.balance = balance;
     }
     public void getAccountDetails(){
-        System.out.println("Account Number :  " + acc_no + "Name :  " +  name + "Balance :  " +balance);
+        System.out.println("Account Number :  " + acc_no + "    Name :  " +  name + "    Balance :  " +balance);
     }
     public double getBalance(){
         return balance;

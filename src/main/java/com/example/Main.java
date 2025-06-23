@@ -21,9 +21,6 @@ public class Main {
                 case 1:
                     ca.getAccountList();
                     break;
-                case 2:
-                    ca.createAccount(option, null, option);
-                    break;
 
                 default:
                     System.out.println("Invalid option. Try again.");
