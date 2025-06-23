@@ -13,13 +13,16 @@ public class Main {
             System.out.println("***********************");
             System.out.println("Welcome to the Bank");
             System.out.println("1. Get customer list");
-            System.out.println("2. Create a Bank Account");
+            System.out.println("2. Search for Account");
             System.out.println("3. Withdraw");
             System.out.println("4. Exit");
             option = sc.nextInt();
             switch (option) {
                 case 1:
                     ca.getAccountList();
+                    break;
+                case 2:
+                    ca.searchAccount();
                     break;
 
                 default:

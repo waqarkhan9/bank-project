@@ -19,6 +19,9 @@ public class Bankaccount {
     public double getBalance(){
         return balance;
     }
+    public String getName(){
+        return name;
+    }
     public void deposit(double amount){
         balance = balance + amount; 
         System.out.println("your balance" + getBalance()); 

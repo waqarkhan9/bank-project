@@ -64,4 +64,24 @@ public class CreateAccount {
 
     }
 
+    public void searchAccount() {
+        String searchName;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please Enter the name");
+        searchName = sc.nextLine();
+
+        if (customers.isEmpty()) {
+            System.out.println("No Customers found");
+
+        }
+        for (int i = 0; i < customers.size(); i++) {
+            if (customers.get(i).getName().contains(searchName)) {
+                getAccountList();
+            }
+
+        }
+        sc.close();
+
+    }
+
 }
