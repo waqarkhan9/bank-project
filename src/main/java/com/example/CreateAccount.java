@@ -3,10 +3,10 @@ package com.example;
 import java.util.Scanner;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class CreateAccount {
     ArrayList<Bankaccount> customers = new ArrayList<Bankaccount>();
+    Scanner sc = new Scanner(System.in);
 
     public CreateAccount() {
         Bankaccount ba = new Bankaccount(1, "Waqar", 5000);
@@ -63,10 +63,9 @@ public class CreateAccount {
         }
 
     }
-/* 
-    public void accountOperations(Bankaccount targetAccount){
-       int  option = 0;
-        Scanner sc = new Scanner(System.in);
+
+    public void accountOperations(Bankaccount targetAccount) {
+        int option = 0;
         while (option != 4) {
             System.out.println("please select an option");
             System.out.println("1. Change Name");
@@ -81,7 +80,7 @@ public class CreateAccount {
                     break;
                 case 2:
                     targetAccount.deposit();
-                   targetAccount.getBalance();
+                    targetAccount.getBalance();
                 case 3:
                     targetAccount.withdraw();
                     targetAccount.getBalance();
@@ -89,28 +88,33 @@ public class CreateAccount {
                     return;
 
                 default:
-                System.out.println("invvalid option try again");
+                    System.out.println("invalid option try again");
                     break;
             }
 
         }
 
     }
-*/
+
     public void searchAccount() {
         String searchName;
+        boolean found = false;
 
-        Scanner sc = new Scanner(System.in);
         System.out.println("Please Enter the name");
         searchName = sc.nextLine();
 
         for (Bankaccount obj : customers) {
             if (obj.getName().equals(searchName)) {
                 System.out.println("Account Found");
+                found = true;
                 obj.getAccountDetails();
+                accountOperations(obj);
 
             }
 
+        }
+        if (found == false) {
+            System.out.println("Account NOT FOUND");
         }
 
     }

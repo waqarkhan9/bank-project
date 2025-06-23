@@ -1,7 +1,6 @@
 package com.example;
 import java.util.Scanner;
 
-import java.util.ArrayList;
 
 public class Bankaccount {
     final int acc_no;
@@ -32,7 +31,7 @@ public class Bankaccount {
         Double amount = sc.nextDouble();
         balance = balance + amount; 
         System.out.println("your balance" + getBalance()); 
-        sc.close();
+    
     }
     public void withdraw(){
         System.out.println("Enter Amount to withdraw");
@@ -44,14 +43,12 @@ public class Bankaccount {
             System.out.println("Insuficient balance, Operation failed");
         }
         System.out.println("your balance " + getBalance());
-        sc.close();
         
     }
     public void setName(){
         System.out.println("Please Enter New Name");
         String newName = sc.nextLine();
         this.name = newName;
-        sc.close();
     }
 
 
