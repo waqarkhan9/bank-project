@@ -8,8 +8,9 @@ import java.util.Arrays;
 public class CreateAccount {
     ArrayList<Bankaccount> customers = new ArrayList<Bankaccount>();
 
-    public  Bankaccount createAccount(int acc_no, String name, double balance) {
-        Scanner sc = new Scanner(System.in);
+    public Bankaccount createAccount(int acc_no, String name, double balance) {
+
+       /*  Scanner sc = new Scanner(System.in);
         System.out.println("Create an account");
         System.out.println("please enter the account number");
         acc_no = sc.nextInt();
@@ -17,16 +18,26 @@ public class CreateAccount {
         name = sc.next();
         System.out.println("please enter initial balance for the account");
         balance = sc.nextDouble();
+*/
         Bankaccount newAccount = new Bankaccount(acc_no, name, balance);
         System.out.println("New account created successfully");
         newAccount.getAccountDetails();
+        customers.add(newAccount);
         return newAccount;
     }
 
-    public static void main(String[] args) {
+    public void getAccountList() {
+        if (customers.isEmpty()){
+            System.out.println("No Customers found");
 
-        createAccount(0, null, 0);
+        }
+        for (int i = 0; i < customers.size(); i++) {
+            customers.get(i).getAccountDetails();
 
+        }
+        
+
+        
     }
 
 }
