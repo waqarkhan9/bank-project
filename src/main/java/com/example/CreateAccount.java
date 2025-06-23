@@ -63,24 +63,55 @@ public class CreateAccount {
         }
 
     }
+/* 
+    public void accountOperations(Bankaccount targetAccount){
+       int  option = 0;
+        Scanner sc = new Scanner(System.in);
+        while (option != 4) {
+            System.out.println("please select an option");
+            System.out.println("1. Change Name");
+            System.out.println("2. Deposit");
+            System.out.println("3. Withdraw");
+            System.out.println("4. Back to main Menu");
+            option = sc.nextInt();
+            switch (option) {
+                case 1:
+                    targetAccount.setName();
+                    targetAccount.getAccountDetails();
+                    break;
+                case 2:
+                    targetAccount.deposit();
+                   targetAccount.getBalance();
+                case 3:
+                    targetAccount.withdraw();
+                    targetAccount.getBalance();
+                case 4:
+                    return;
 
+                default:
+                System.out.println("invvalid option try again");
+                    break;
+            }
+
+        }
+
+    }
+*/
     public void searchAccount() {
         String searchName;
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Please Enter the name");
         searchName = sc.nextLine();
 
-        if (customers.isEmpty()) {
-            System.out.println("No Customers found");
+        for (Bankaccount obj : customers) {
+            if (obj.getName().equals(searchName)) {
+                System.out.println("Account Found");
+                obj.getAccountDetails();
 
-        }
-        for (int i = 0; i < customers.size(); i++) {
-            if (customers.get(i).getName().contains(searchName)) {
-                getAccountList();
             }
 
         }
-        sc.close();
 
     }
 

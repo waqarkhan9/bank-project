@@ -1,4 +1,5 @@
 package com.example;
+import java.util.Scanner;
 
 import java.util.ArrayList;
 
@@ -7,6 +8,10 @@ public class Bankaccount {
     String name;
     double balance = 0;
     double amount;
+
+    Scanner sc = new Scanner(System.in);
+
+    
     
     public Bankaccount(int acc_no, String name, double balance){
         this.acc_no = acc_no;
@@ -22,11 +27,16 @@ public class Bankaccount {
     public String getName(){
         return name;
     }
-    public void deposit(double amount){
+    public void deposit(){
+        System.out.println("Enter Amount to deposit");
+        Double amount = sc.nextDouble();
         balance = balance + amount; 
         System.out.println("your balance" + getBalance()); 
+        sc.close();
     }
-    public void withdraw(double amount){
+    public void withdraw(){
+        System.out.println("Enter Amount to withdraw");
+        Double amount = sc.nextDouble();
         if(amount <= balance){
             balance =  balance - amount;
         }
@@ -34,10 +44,14 @@ public class Bankaccount {
             System.out.println("Insuficient balance, Operation failed");
         }
         System.out.println("your balance " + getBalance());
+        sc.close();
         
     }
-    public void setName(String newName){
+    public void setName(){
+        System.out.println("Please Enter New Name");
+        String newName = sc.nextLine();
         this.name = newName;
+        sc.close();
     }
 
 
