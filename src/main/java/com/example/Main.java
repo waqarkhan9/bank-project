@@ -35,6 +35,10 @@ public class Main {
                     System.out.println("Invalid option. Try again.");
                     break;
             }
+            if (sc.hasNextLine()){
+                System.out.println(sc.hasNextLine());
+                sc.close();;
+            }
         }
 
     }

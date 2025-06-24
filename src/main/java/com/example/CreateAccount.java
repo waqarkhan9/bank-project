@@ -48,8 +48,9 @@ public class CreateAccount {
         System.out.println("New account created successfully");
         newAccount.getAccountDetails();
         customers.add(newAccount);
+        sc.close();
         System.out.println("Back to main menu");
-        
+
     }
 
     public void getAccountList() {
