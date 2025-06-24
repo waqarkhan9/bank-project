@@ -1,6 +1,5 @@
 package com.example;
 
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Main {
@@ -10,13 +9,14 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         int option = 0;
-        while (option != 3) {
+        while (option != 4) {
             System.out.println("***********************");
             System.out.println("Welcome to the Bank");
             System.out.println("1. Get customer list");
             System.out.println("2. Search for Account");
-            System.out.println("3. Exit");
-         
+            System.out.println("3. Create Account");
+            System.out.println("4. Exit");
+
             option = sc.nextInt();
             switch (option) {
                 case 1:
@@ -26,6 +26,9 @@ public class Main {
                     ca.searchAccount();
                     break;
                 case 3:
+                    ca.createAccount(option, null, option);
+                    break;
+                case 4:
                     System.exit(0);
 
                 default:
