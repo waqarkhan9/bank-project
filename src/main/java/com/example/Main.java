@@ -9,6 +9,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         int option = 0;
+
         while (option != 4) {
             System.out.println("***********************");
             System.out.println("Welcome to the Bank");
@@ -16,7 +17,6 @@ public class Main {
             System.out.println("2. Search for Account");
             System.out.println("3. Create Account");
             System.out.println("4. Exit");
-
             option = sc.nextInt();
             switch (option) {
                 case 1:
@@ -30,15 +30,13 @@ public class Main {
                     break;
                 case 4:
                     System.exit(0);
+                    break;
 
                 default:
                     System.out.println("Invalid option. Try again.");
                     break;
             }
-            if (sc.hasNextLine()){
-                System.out.println(sc.hasNextLine());
-                sc.close();;
-            }
+
         }
 
     }

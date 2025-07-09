@@ -65,14 +65,22 @@ public class CreateAccount {
 
     }
 
+    public void deleteAccount(Bankaccount x) {
+        customers.remove(x);
+        getAccountList();
+  
+
+    }
+
     public void accountOperations(Bankaccount targetAccount) {
         int option = 0;
-        while (option != 4) {
+        while (option != 5) {
             System.out.println("please select an option");
             System.out.println("1. Change Name");
             System.out.println("2. Deposit");
             System.out.println("3. Withdraw");
-            System.out.println("4. Back to main Menu");
+            System.out.println("4. Delete Account");
+            System.out.println("5. Back to main Menu");
             option = sc.nextInt();
             switch (option) {
                 case 1:
@@ -86,7 +94,10 @@ public class CreateAccount {
                     targetAccount.withdraw();
                     targetAccount.getBalance();
                 case 4:
-                    return;
+                    deleteAccount(targetAccount);
+                    break;
+                case 5:
+                    break;
 
                 default:
                     System.out.println("invalid option try again");
